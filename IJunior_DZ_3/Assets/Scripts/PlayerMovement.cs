@@ -6,11 +6,10 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float _accelerate;
 
-    private Animator _animation;
-
     private const string IsWalk = "IsWalk";
     private const string IsRunning = "IsRunning";
 
+    private Animator _animation;
     private bool _lookRight = true;
     private float _playerWalkSpeed = 1.5f;
 
@@ -21,49 +20,41 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.LeftShift))
+        if(Input.GetKey(KeyCode.A))
         {
-            if (_lookRight)
+            if(_lookRight)
             {
-                _lookRight = false;
-                ChangeLook();
+                ChangeLook(ref _lookRight);
             }
-            _animation.SetBool(IsWalk, true);
-            _animation.SetBool(IsRunning, true);
-            transform.Translate((_accelerate + _playerWalkSpeed) * Time.deltaTime, 0, 0);
-        }
-        else if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.LeftShift))
-        {
-            if (_lookRight == false)
-            {
-                _lookRight = true;
-                ChangeLook();
-            }
-            _animation.SetBool(IsWalk, true);
-            _animation.SetBool(IsRunning, true);
-            transform.Translate((_accelerate + _playerWalkSpeed) * Time.deltaTime, 0, 0);
-        }
-        else if (Input.GetKey(KeyCode.A))
-        {
-            if (_lookRight)
-            {
-                _lookRight = false;
-                ChangeLook();
-            }
-            _animation.SetBool(IsRunning, false);
             _animation.SetBool(IsWalk, true);
             transform.Translate(_playerWalkSpeed * Time.deltaTime, 0, 0);
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                _animation.SetBool(IsRunning, true);
+                transform.Translate((_accelerate + _playerWalkSpeed) * Time.deltaTime, 0, 0);
+            }
+            else
+            {
+                _animation.SetBool(IsRunning, false);
+            }
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            if (_lookRight == false)
+            if(_lookRight == false)
             {
-                _lookRight = true;
-                ChangeLook();
+                ChangeLook(ref _lookRight);
             }
-            _animation.SetBool(IsRunning, false);
             _animation.SetBool(IsWalk, true);
             transform.Translate(_playerWalkSpeed * Time.deltaTime, 0, 0);
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                _animation.SetBool(IsRunning, true);
+                transform.Translate((_accelerate + _playerWalkSpeed) * Time.deltaTime, 0, 0);
+            }
+            else
+            {
+                _animation.SetBool(IsRunning, false);
+            }
         }
         else
         {
@@ -72,8 +63,16 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void ChangeLook()
+    private void ChangeLook(ref bool lookRight)
     {
         transform.Rotate(new Vector2(0, 180));
+        if (lookRight)
+        {
+            lookRight = false;
+        }
+        else
+        {
+            lookRight = true;
+        }
     }
 }

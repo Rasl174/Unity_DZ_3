@@ -474,7 +474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c555696e9a040294a9cb3f7f40515d00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _coin: {fileID: 7584213678573293893, guid: c243839650cea2b48924d9b97417f129, type: 3}
+  _coin: {fileID: 9085364594757805977, guid: c243839650cea2b48924d9b97417f129, type: 3}
 --- !u!4 &467371492
 Transform:
   m_ObjectHideFlags: 0
@@ -631,7 +631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c555696e9a040294a9cb3f7f40515d00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _coin: {fileID: 7584213678573293893, guid: c243839650cea2b48924d9b97417f129, type: 3}
+  _coin: {fileID: 9085364594757805977, guid: c243839650cea2b48924d9b97417f129, type: 3}
 --- !u!4 &843915146
 Transform:
   m_ObjectHideFlags: 0
@@ -937,7 +937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c555696e9a040294a9cb3f7f40515d00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _coin: {fileID: 7584213678573293893, guid: c243839650cea2b48924d9b97417f129, type: 3}
+  _coin: {fileID: 9085364594757805977, guid: c243839650cea2b48924d9b97417f129, type: 3}
 --- !u!4 &1195591557
 Transform:
   m_ObjectHideFlags: 0
@@ -1170,7 +1170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c555696e9a040294a9cb3f7f40515d00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _coin: {fileID: 7584213678573293893, guid: c243839650cea2b48924d9b97417f129, type: 3}
+  _coin: {fileID: 9085364594757805977, guid: c243839650cea2b48924d9b97417f129, type: 3}
 --- !u!4 &1664903359
 Transform:
   m_ObjectHideFlags: 0
