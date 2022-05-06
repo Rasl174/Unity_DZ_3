@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SawsMovement : MonoBehaviour
+public class WaypointMovement : MonoBehaviour
 {
     [SerializeField] private Transform _path;
     [SerializeField] private float _speed;
